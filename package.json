@@ -1,7 +1,7 @@
 {
 	"name": "@madebyheyday/env-util",
 	"version": "1.0.0",
-	"private": true,
+	"private": false,
 	"scripts": {
 		"build": "rm dist/* && tsc -d --outDir dist/ src/*.ts"
 	},
