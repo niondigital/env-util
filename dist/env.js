@@ -8,12 +8,19 @@ var appRoot = require("app-root-path");
 var loadedEnvs = new Map();
 function loadEnvironment(path) {
     if (!loadedEnvs.has(path)) {
-        loadedEnvs.set(path, dotenvExpand(dotenv.config({ path: path })));
+        var result = dotenvExpand(dotenv.config({ path: path }));
+        if (result.error) {
+            throw result.error;
+        }
+        loadedEnvs.set(path, result);
     }
 }
 exports.loadEnvironment = loadEnvironment;
 var localEnvFile = pathModule.resolve(String(appRoot), './.env.local');
+var envFile = pathModule.resolve(String(appRoot), './.env');
 if (fs_1.existsSync(localEnvFile)) {
     loadEnvironment(localEnvFile);
 }
-loadEnvironment(pathModule.resolve(String(appRoot), './.env'));
+if (fs_1.existsSync(envFile)) {
+    loadEnvironment(envFile);
+}

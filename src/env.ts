@@ -8,16 +8,23 @@ const loadedEnvs: Map<string, dotenv.DotenvConfigOutput> = new Map();
 
 function loadEnvironment(path: string): void {
 	if (!loadedEnvs.has(path)) {
-		loadedEnvs.set(path, dotenvExpand(dotenv.config({ path })));
+		const result: dotenv.DotenvConfigOutput = dotenvExpand(dotenv.config({ path }));
+		if (result.error) {
+			throw result.error;
+		}
+		loadedEnvs.set(path, result);
 	}
 }
 
 const localEnvFile: string = pathModule.resolve(String(appRoot), './.env.local');
+const envFile: string = pathModule.resolve(String(appRoot), './.env');
 
 if (existsSync(localEnvFile)) {
 	loadEnvironment(localEnvFile);
 }
 
-loadEnvironment(pathModule.resolve(String(appRoot), './.env'));
+if (existsSync(envFile)) {
+	loadEnvironment(envFile);
+}
 
 export { loadEnvironment };
