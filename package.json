@@ -32,6 +32,6 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git@github.com:seibert-io/heyday-env.git"
+		"url": "git@github.com:madebyheyday/env-util.git"
 	}
 }
