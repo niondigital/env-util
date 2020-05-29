@@ -11,6 +11,7 @@
 		"dotenv-expand": "5.1.0"
 	},
 	"main": "dist/env.js",
+	"exports": "dist/env.js",
 	"devDependencies": {
 		"@commitlint/cli": "8.2.0",
 		"@commitlint/config-conventional": "8.2.0",
