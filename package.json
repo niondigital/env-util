@@ -13,22 +13,10 @@
 	"main": "dist/env.js",
 	"exports": "dist/env.js",
 	"devDependencies": {
-		"@commitlint/cli": "8.2.0",
-		"@commitlint/config-conventional": "8.2.0",
+		"@madebyheyday/linting-base": "^1.1.9",
 		"@types/app-root-path": "^1.2.4",
 		"@types/dotenv": "6.1.1",
 		"@types/node": "14.0.5",
-		"@typescript-eslint/eslint-plugin": "^2.6.1",
-		"@typescript-eslint/parser": "2.6.1",
-		"commitizen": "4.0.3",
-		"commitlint-config-cz": "0.12.1",
-		"eslint": "6.5.1",
-		"eslint-config-prettier": "6.4.0",
-		"eslint-plugin-no-new-instance": "1.1.0",
-		"eslint-plugin-prettier": "3.1.1",
-		"husky": "3.0.9",
-		"lint-staged": "9.5.0",
-		"prettier": "1.18.2",
 		"typescript": "3.6.4"
 	},
 	"repository": {
