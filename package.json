@@ -1,6 +1,6 @@
 {
 	"name": "@madebyheyday/env-util",
-	"version": "1.0.6",
+	"version": "1.0.7",
 	"private": false,
 	"scripts": {
 		"build": "rm dist/* && tsc -d --outDir dist/ src/*.ts"
@@ -13,7 +13,7 @@
 	"main": "./dist/env.js",
 	"exports": "./dist/env.js",
 	"devDependencies": {
-		"@madebyheyday/linting-base": "^1.1.12",
+		"@madebyheyday/linting-base": "^1.1.23",
 		"@types/app-root-path": "^1.2.4",
 		"@types/dotenv": "6.1.1",
 		"@types/node": "14.0.5",
