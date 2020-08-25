@@ -11,3 +11,11 @@ import { loadEnvironment } from '@madebyheyday/env-util';
 
 loadEnvironment('path/to/.env');
 ```
+
+## Package development
+
+### Creating a release
+- Make changes and increase version number package.json/package-lock.json
+- Execute `npm run build`
+- Commit changes 
+- Execute `npm publish && git push && git push --tags`
