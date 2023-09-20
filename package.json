@@ -1,23 +1,26 @@
 {
 	"name": "@niondigital/env-util",
-	"version": "1.1.0",
+	"version": "2.0.0",
 	"private": false,
 	"scripts": {
 		"build": "rm dist/* && tsc -d --outDir dist/ src/*.ts"
 	},
+	"engines": {
+		"node": ">=18.14.0"
+	},
 	"dependencies": {
-		"app-root-path": "^3.0.0",
-		"dotenv": "8.2.0",
-		"dotenv-expand": "5.1.0"
+		"app-root-path": "^3.1.0",
+		"dotenv": "16.3.1",
+		"dotenv-expand": "10.0.0"
 	},
 	"main": "./dist/env.js",
 	"exports": "./dist/env.js",
 	"devDependencies": {
-		"@niondigital/linting-base": "^3.0.1",
-		"@types/app-root-path": "^1.2.4",
-		"@types/dotenv": "6.1.1",
-		"@types/node": "14.0.5",
-		"typescript": "3.6.4"
+		"@niondigital/linting-base": "^6.0.0",
+		"@types/app-root-path": "^1.2.5",
+		"@types/dotenv": "8.2.0",
+		"@types/node": "20.6.3",
+		"typescript": "5.2.2"
 	},
 	"repository": {
 		"type": "git",
